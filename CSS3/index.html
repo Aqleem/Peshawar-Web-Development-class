@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Example</title>
+    <style>
+        /* Universal Selector * {} Targets all elements on the page */
+        * {
+            color: rgb(10, 142, 179);
+            font-family: Arial, sans-serif;
+        } 
+
+        /* Type Selector Targets the <h1>, <h2> and <h3> elements */
+        h1, h2, h3 {
+            color: skyblue;
+            margin: 20px;
+        } 
+
+        /* Class Selector Matches an element whose class attribute has a value that matches the one specified after the period (or full stop) symbol */
+        .box {
+            border: 10px solid red;
+            padding: 10px;
+        } 
+
+        /* ID Selector Matches an element whose id attribute has a value that matches the one specified after the pound or hash symbol */
+        #red {
+            color: red;
+        }
+
+        /* Child Selector Matches an element that is a direct child of another */
+        ol > li {
+            color: blue;
+            text-decoration: underline;
+            font-size: 20px;
+            border: 2px solid blue;
+            margin-left: 20px;
+        }
+
+        /* Descendant Selector Matches an element that is a descendant of another specified element (not just a direct child of that element) */
+        h3 p {
+            background-color: red;
+            color: wheat;
+            padding: 5px;
+        }
+
+        /* Adjacent Sibling Selector Matches an element that is the next sibling of another */
+        h3 + p {
+            color: red;
+            font-style: italic;
+        }
+
+        /* General Sibling Selector Matches an element that is a sibling of another, although it does not have to be the directly preceding element */
+        h3 ~ p {
+            color: green;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: large;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Universal Selector -->
+    <h1>This is an h1 Heading</h1>
+    <h2>This is an h2 Heading</h2>
+    <h3>This is an h3 Heading</h3>
+    
+    <!-- Class Selector -->
+    <div class="box">
+        <p class="red">This paragraph has the class "red".</p>
+    </div>
+    
+    <!-- ID Selector -->
+    <p id="red">This paragraph has the ID "red".</p>
+    
+    <!-- Child Selector -->
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+    </ol>
+    
+    <!-- Descendant Selector -->
+    <h3>Heading 3</h3>
+    <p>This paragraph is a descendant of h3.</p>
+    
+    <!-- Adjacent Sibling Selector -->
+    <h3>Another H3</h3>
+    <p>This paragraph is an adjacent sibling of h3.</p>
+    
+    <!-- General Sibling Selector -->
+    <h3>Yet Another H3</h3>
+    <p>This paragraph is a general sibling of h3.</p>
+</body>
+</html>
